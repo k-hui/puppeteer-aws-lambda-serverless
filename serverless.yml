@@ -16,10 +16,14 @@ provider:
         path: ./
 
 functions:
-  hello:
+  app:
     image:
       name: puppeteer
       command:
         - '/app/dist/lambda.handler'
       entryPoint:
         - '/lambda-entrypoint.sh'
+    events:
+      - httpApi:
+          method: any
+          path: /
