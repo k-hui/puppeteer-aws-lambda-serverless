@@ -1,6 +1,6 @@
 service: puppeteer-aws-lambda-serverless
 
-frameworkVersion: "3"
+frameworkVersion: '3'
 useDotenv: true
 
 provider:
@@ -20,9 +20,6 @@ functions:
     image:
       name: puppeteer
       command:
-        - "app.handler"
+        - 'dist/lambda.handler'
       entryPoint:
-        - "/lambda-entrypoint.sh"
-
-plugins:
-  - serverless-offline
+        - '/lambda-entrypoint.sh'

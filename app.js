@@ -1,5 +1,3 @@
-"use strict";
-
 module.exports.handler = async (event) => {
   return {
     statusCode: 200,
@@ -8,7 +6,7 @@ module.exports.handler = async (event) => {
         message: `Hello, world! Your function executed successfully!`,
       },
       null,
-      2
+      2,
     ),
-  };
-};
+  }
+}

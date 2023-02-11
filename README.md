@@ -1,5 +1,12 @@
 # puppeteer-aws-lambda-serverless
 
+## Getting Started
+
+```
+npm install
+npm run start
+```
+
 ## Deploy
 
 ```
@@ -12,7 +19,7 @@ sls deploy
 sls invoke --function hello
 ```
 
-## Clean Docker image
+## Clean docker image
 
 ```
 docker system prune -f
