@@ -1,0 +1,28 @@
+service: puppeteer-aws-lambda-serverless
+
+frameworkVersion: "3"
+useDotenv: true
+
+provider:
+  name: aws
+  region: us-east-1
+  profile: dev
+  memorySize: 512
+  architecture: arm64
+
+  ecr:
+    images:
+      puppeteer:
+        path: ./
+
+functions:
+  hello:
+    image:
+      name: puppeteer
+      command:
+        - "app.handler"
+      entryPoint:
+        - "/lambda-entrypoint.sh"
+
+plugins:
+  - serverless-offline
