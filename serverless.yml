@@ -20,6 +20,6 @@ functions:
     image:
       name: puppeteer
       command:
-        - 'dist/lambda.handler'
+        - '/app/dist/lambda.handler'
       entryPoint:
         - '/lambda-entrypoint.sh'

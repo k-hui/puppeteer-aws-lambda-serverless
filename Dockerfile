@@ -21,10 +21,11 @@ RUN npm ci --omit=dev
 
 COPY --from=development /app/dist/ ./dist/
 
-COPY app.js ./
+# test only
+COPY app.js ./dist/
 
 EXPOSE 3000
 
 # You can overwrite command in `serverless.yml` template
-# CMD [ "/app/dist/lambda.handler" ]
-CMD [ "/app/dist/app.handler" ]
+CMD [ "/app/dist/lambda.handler" ]
+# CMD [ "/app/dist/app.handler" ]

@@ -9,6 +9,7 @@ import {
   VersioningType,
 } from '@nestjs/common'
 import express from 'express'
+require('source-map-support/register')
 import { configure as serverlessExpress } from '@vendia/serverless-express'
 import {
   SwaggerModule,
