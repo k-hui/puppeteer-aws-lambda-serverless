@@ -13,10 +13,12 @@ npm run start
 sls deploy
 ```
 
-## Test
+## Test with docker
 
 ```
-sls invoke --function hello
+sh docker-build.sh
+sh docker-run.sh
+sh docker-test.sh
 ```
 
 ## Clean docker image
