@@ -32,7 +32,8 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0",
     "typeorm": "^0.3.12",
-    "source-map-support": "^0.5.20"
+    "source-map-support": "^0.5.20",
+    "puppeteer": "^19.6.3"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",

@@ -1,5 +1,9 @@
 # puppeteer-aws-lambda-serverless
 
+## References
+
+- https://aws.amazon.com/blogs/architecture/field-notes-scaling-browser-automation-with-puppeteer-on-aws-lambda-with-container-image-support/
+
 ## Getting Started
 
 ```
