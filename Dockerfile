@@ -1,5 +1,4 @@
-# FROM public.ecr.aws/lambda/nodejs:16 as development
-FROM amazon/aws-lambda-nodejs:16 as development
+FROM public.ecr.aws/lambda/nodejs:16-x86_64 as development
 
 WORKDIR /app
 
@@ -16,8 +15,7 @@ COPY src/ src/
 
 RUN npm run build
 
-# FROM public.ecr.aws/lambda/nodejs:16 as production
-FROM amazon/aws-lambda-nodejs:16 as production
+FROM public.ecr.aws/lambda/nodejs:16-x86_64 as production
 
 # Install Chrome to get all of the dependencies installed
 RUN yum install -y amazon-linux-extras

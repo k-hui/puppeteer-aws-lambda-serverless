@@ -8,7 +8,7 @@ provider:
   region: us-east-1
   profile: dev
   memorySize: 512
-  architecture: arm64
+  architecture: x86_64
 
   ecr:
     images:
