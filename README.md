@@ -46,3 +46,7 @@ sh docker-test.sh
 ```
 docker system prune -f
 ```
+
+## Troubleshoot
+
+- chromium doesn't support arm64 in Linux
