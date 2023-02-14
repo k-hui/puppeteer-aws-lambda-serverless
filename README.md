@@ -17,6 +17,22 @@ npm run start
 sls deploy
 ```
 
+## Test
+
+```
+sh test.sh
+```
+
+### PDF
+
+- http://localhost:3000/pdf?url=https://news.yahoo.com/
+- http://localhost:3000/pdf?url=https://news.google.com/
+
+### Image
+
+- http://localhost:3000/image?url=https://news.yahoo.com/
+- http://localhost:3000/image?url=https://news.google.com/
+
 ## Test with docker
 
 ```

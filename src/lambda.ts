@@ -69,6 +69,13 @@ export const handler: Handler = async (
   callback: any,
 ) => {
   const app = await bootstrapServer()
-  const handler = serverlessExpress({ app })
+  const handler = serverlessExpress({
+    app: app,
+    // important for download png and pdf
+    binarySettings: {
+      isBinary: true,
+      contentTypes: ['application/png', 'application/pdf'],
+    },
+  })
   return handler(event, context, callback)
 }

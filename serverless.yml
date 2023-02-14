@@ -7,8 +7,13 @@ provider:
   name: aws
   region: us-east-1
   profile: dev
-  memorySize: 512
   architecture: x86_64
+  environment:
+    ENV: ${env:ENV}
+  # important for download pdf
+  apiGateway:
+    binaryMediaTypes:
+      - '*/*'
 
   ecr:
     images:
@@ -17,6 +22,8 @@ provider:
 
 functions:
   app:
+    memorySize: 512
+    timeout: 29 # ApiGateway max timeout is 30s
     image:
       name: puppeteer
       command:
@@ -25,5 +32,5 @@ functions:
         - '/lambda-entrypoint.sh'
     events:
       - httpApi:
-          method: any
-          path: /
+          method: '*'
+          path: '*'
