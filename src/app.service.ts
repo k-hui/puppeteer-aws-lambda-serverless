@@ -3,6 +3,7 @@ import puppeteer, { Browser, Page } from 'puppeteer'
 
 @Injectable()
 export class AppService {
+  // align AWS Lambda filesystem
   pdfPath: string = '/tmp/test.pdf'
   imgPath: string = '/tmp/test.png'
 
