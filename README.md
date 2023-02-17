@@ -47,6 +47,6 @@ sh docker-test.sh
 docker system prune -f
 ```
 
-## Troubleshoot
+## Troubleshoots
 
-- chromium doesn't support arm64 in Linux
+- chromium doesn't support arm64 Lambda Image, so I chose x86_64. However I cannot run in local machine M1 MacOS
